@@ -8,7 +8,7 @@ import Dashboard from '../ui/Dashboard';
 import NotFound from '../ui/NotFound';
 import Login from '../ui/Login';
 
-const history = browserHistory.createBrowserHistory();
+// const history = browserHistory.createBrowserHistory();
 
 const unathenticatedPages = ['/', '/signup'];
 const athenticatedPages = ['/dashboard'];
@@ -17,17 +17,17 @@ const isLoggedIn = () => {
 };
 
 export const onAuthChange = (isAuthenticated) => {
-  const pathname = history.location.pathname;
-  console.log("pathname: ", pathname);
+  // const pathname = history.location.pathname;
+  // console.log("pathname: ", pathname);
 
-  const isUnathenticatedPage = unathenticatedPages.includes(pathname);
-  const isAthenticatedPage = athenticatedPages.includes(pathname);
+  // const isUnathenticatedPage = unathenticatedPages.includes(pathname);
+  // const isAthenticatedPage = athenticatedPages.includes(pathname);
 
-  if (isLoggedIn() && isUnathenticatedPage) {
+  /*if (isLoggedIn() && isUnathenticatedPage) {
     history.replace('/dashboard');
   } else if (!isLoggedIn() && isAthenticatedPage) {
     history.replace('/');
-  }
+  }*/
 };
 
 export const routes = (

@@ -1,6 +1,8 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+
 import PrivateHeader from './PrivateHeader';
+import NoteList from './NoteList';
 
 const MyLink = (props) => {
   const navigate = (evt) => {
@@ -14,6 +16,7 @@ const MyLink = (props) => {
       <div className="page-content">
         <button className="button" onClick={navigate.bind(this)}>Go to Not Found page</button>
         dashboard page content
+        <NoteList />
       </div>
     </div>
   );
